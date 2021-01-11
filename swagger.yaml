@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
   version: "1.0.0"
-  title: "gpt2-recipe-maker"
-host: "master-gpt2-recipe-maker-ha-mulan.endpoint.ainize.ai"
+  title: "gpt2-food-reviews"
+host: "main-gpt2-food-reviews-ha-mulan.endpoint.ainize.ai"
 basePath: "/api/"
 schemes:
 - "https"
@@ -15,18 +15,18 @@ paths:
   /:
     get:
       tags:
-      - "make recipe related to cuisine"
-      summary: "create recipe"
-      description: "please input name of cuisine"
+      - "generate reviews related to review title"
+      summary: "create review"
+      description: "please input title of review"
       produces:
       - "string"
       - "application/xml"
       - "application/json"
       parameters:
-      - name: "food"
+      - name: "review"
         type: 'string'
         in: "query"
-        description: "name of cuisine"
+        description: "title of review"
         required: true
         items:
           type: "string"
