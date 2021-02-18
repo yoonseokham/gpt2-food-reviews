@@ -15,9 +15,23 @@ paths:
   /:
     get:
       tags:
-      - "generate reviews related to review title"
-      summary: "create review"
-      description: "please input title of review"
+      - "generate food reviews base on keyword"
+      summary: "generate food reviews base on keyword"
+      description: 'please input keyword and you will find out food reviews related to keyword.
+
+
+      This app is generate answer in text form.
+
+
+      How to use:
+
+
+        First, input keyword.
+
+        Second, wait for food reviews related to keyword.
+
+
+      '
       produces:
       - "string"
       - "application/xml"
@@ -26,7 +40,7 @@ paths:
       - name: "review"
         type: 'string'
         in: "query"
-        description: "title of review"
+        description: "ex) type 'great'"
         required: true
         items:
           type: "string"
